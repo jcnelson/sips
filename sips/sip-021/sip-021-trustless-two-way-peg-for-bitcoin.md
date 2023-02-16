@@ -1244,8 +1244,9 @@ address to receive the sBTC
 
 ### Peg-out Request Transaction
 
-* **Description**: This is used by an sBTC holder to request a peg-out *
-**Opcode**: `>`
+* **Description**: This is used by an sBTC holder to request a peg-out
+
+* **Opcode**: `>`
 
 * **Data**
 
@@ -1254,12 +1255,11 @@ satoshis (big-endian)
 
         * **Bytes 11-76**: A 65-byte recoverable secp256k1 low-S
 signature from the sBTC owner's private key(s), over the SHA512/256 hash of the
-bytes consisting of
+bytes consisting of:
 
-		* the number of sBTC (bytes 3-11 above)
+            * the number of sBTC (bytes 3-11 above)
 
-		* Output 2's
-scriptPubKey
+            * Output 2's scriptPubKey
 
 * **Output 2**: a dust output with the recipient Bitcoin
 scriptPubKey
